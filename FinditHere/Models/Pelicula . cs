@@ -1,0 +1,28 @@
+﻿using System.Text.Json.Serialization;
+
+namespace FinditHere.Models
+{
+    public class Pelicula
+    {
+         [JsonPropertyName("id")]
+        public int Id { get; set; }
+
+         [JsonPropertyName("title")]
+        public string Titulo { get; set; } = string. Empty;
+
+         [JsonPropertyName("overview")]
+        public string Sinopsis { get; set; } = string. Empty;
+
+         [JsonPropertyName("poster_path")]
+        public string? RutaPoster { get; set; }
+
+         [JsonPropertyName("backdrop_path")]
+        public string? RutaFondo { get; set; }
+
+         [JsonPropertyName("vote_average")]
+        public double Calificacion { get; set; }
+
+         [JsonPropertyName("release_date")]
+        public string? FechaEstreno { get; set; }
+    }
+}

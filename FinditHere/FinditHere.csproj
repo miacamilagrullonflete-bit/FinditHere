@@ -4,6 +4,15 @@
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>f8eb2213-3251-4a7d-9222-a8a3582e69e4</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\Miaca\Documents\GitHub\Proyecto-1\FinditHere\FinditHere\Models\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\Miaca\Documents\GitHub\Proyecto-1\FinditHere\FinditHere\Models\.editorconfig" />
+  </ItemGroup>
 
 </Project>
