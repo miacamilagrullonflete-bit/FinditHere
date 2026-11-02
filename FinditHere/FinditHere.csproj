@@ -12,6 +12,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Models\Pelicula . cs" />
+    <None Remove="Models\RespuestaPeliculas . cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Models\Pelicula . cs" />
+    <Compile Include="Models\RespuestaPeliculas . cs" />
+    <Compile Include="Services\TmdbServices . cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="C:\Users\Miaca\Documents\GitHub\Proyecto-1\FinditHere\FinditHere\Models\.editorconfig" />
   </ItemGroup>
 

@@ -1,7 +1,11 @@
+using FinditHere.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddHttpClient<TmdbServices>();
 
 var app = builder.Build();
 

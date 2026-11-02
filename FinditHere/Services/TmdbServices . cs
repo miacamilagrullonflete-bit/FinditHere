@@ -1,0 +1,24 @@
+﻿using FinditHere.Models;
+
+namespace FinditHere.Services
+{
+    public class TmdbServices
+    {
+      private readonly HttpClient _httpClient;
+      private readonly string _apiKey;
+
+       public TmdbServices(HttpClient httpClient, IConfiguration config)
+       {
+              _httpClient = httpClient;
+              _apiKey = config["TMDB:ApiKey"]
+               ?? throw new InvalidOperationException("Falta la API key de TMDB");
+       }
+
+       public async Task<List<Pelicula>> ObtenerPopularesAsync()
+      {
+        var url = $"https://api.themoviedb.org/3/movie/popular?api_key={_apiKey}&language=es-ES";
+        var respuesta = await _httpClient.GetFromJsonAsync<RespuestaPeliculas>(url);
+        return respuesta?.Peliculas ?? new List<Pelicula>();
+      }
+    }
+}
