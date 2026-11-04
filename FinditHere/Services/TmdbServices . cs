@@ -20,5 +20,12 @@ namespace FinditHere.Services
         var respuesta = await _httpClient.GetFromJsonAsync<RespuestaPeliculas>(url);
         return respuesta?.Peliculas ?? new List<Pelicula>();
       }
+
+      public async Task<List<Pelicula>> BuscarPeliculasAsync(string query)
+      {
+        var url = $"https://api.themoviedb.org/3/search/movie?api_key={_apiKey}&language=es-ES&query={Uri.EscapeDataString(query)}";
+        var respuesta = await _httpClient.GetFromJsonAsync<RespuestaPeliculas>(url);
+        return respuesta?.Peliculas ?? new List<Pelicula>();
+      }
     }
 }
