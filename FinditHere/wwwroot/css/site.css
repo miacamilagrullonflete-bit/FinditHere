@@ -29,3 +29,26 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+.peliculas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+.tarjeta {
+    padding: 0;
+    box-sizing: border-box; 
+    overflow: hidden;
+}
+.tarjeta img {
+  width: 100%;
+  display: block; 
+}
+.tarjeta h3 {
+  font-size: 1.1rem;
+  margin: 10px 0 4px 0;
+}
+.tarjeta p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
